@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    p{ position: absolute;  }
+    .top300{
+        top:300px;
+    }
+    .top330{
+        top:330px;
+    }
+    .top360{
+        top: 360px;
+    }
+    .top120L{
+        top:120px;
+        left: 60px;
+    }
+    .top150L{
+        top:150px;
+        left: 60px;
+    }
+    .top190L{
+        top:190px;
+        left: 60px;
+    }
+    .top120R{
+        top:120px;
+        right: 60px;
+    }
+    .top150R{
+        top:150px;
+        right: 60px;
+    }
+    .top190R{
+        top:190px;
+        right: 60px;
+    }
+    /*导航*/
+    .nav{
+        width: 100%;
+        height: 88px;
+        margin: 0;
+        padding-top:33px;
+        padding-left:62px;
+        vertical-align: middle;
+        display: inline-block;
+        position: relative;
+    }
+    .nav_bar{
+        font:23px arial,'Microsoft YaHei';
+        position: absolute;
+    }
+    .nav_bar_font{
+        top: 45px;
+        left: 400px;
+    }
+    .nav_bar_point{
+        top: 47px;
+        left: 524px;
+    }
+    .nav_bar_font1{
+        top: 45px;
+        left: 589px;
+    }
+    .nav_bar_point1{
+        top: 47px;
+        left: 735px;
+    }
+    .nav_bar_font2{
+        top: 45px;
+        left: 797px;
+    }
+    .nav_bar_point2{
+        top: 47px;
+        left: 943px;
+    }
+    .nav_bar_font3{
+        top: 45px;
+        left: 1007px;
+    }
+    .nav_bar_point3{
+        top: 47px;
+        left: 1153px;
+    }
+    .nav_bar_font4{
+        top: 45px;
+        left: 1214px;
+    }.nav_bar_point4{
+         top: 47px;
+         left: 1362px;
+     }
+    .nav_bar_font5{
+        top: 45px;
+        left: 1425px;
+    }
+    .nav_bar_font{
+        color: #1C1C1C;
+        text-decoration: none;
+    }
+    /*banner*/
+    .banner{
+        margin: 0;
+        padding:0;
+        width: 1920px;
+        height: 800px;
+        background-image: url(images/banner_01.png);
+        position: absolute;
+        top: 0px;
+        z-index:-1;
+    }
+    /*主体*/
+    .skip_number,.skip_numberA,.skip_go{
+        display: inline-block;
+        padding:12px 10px 5px 10px;
+        font:16px Reaular,"Myriad Pro";
+        background:#087C26;
+        border-radius: 50px;
+        color: #ffffff;
+        margin-right: 10px;
+        line-height: 20px;
+    }
+    .skip_go{
+        padding: 12px 8px 5px 8px;
+    }
+    .skip_numberA{
+        background:#80C269;
+        position: relative;
+        top:30px;
+        left: 30px;
+    }
+    .skip_pic,.skip_arrow,.skip_arrowA{
+        display: inline-block;
+        margin: 0px 30px 0 0;
+        position: relative;
+        top: 11px;
+    }
+    .skip_arrowA{
+        margin-right:20px;
+        top:32px;
+        left: 31px;
+    }
+    .skip_arrow{
+        top: 2px;
+    }
+    .skip_font{
+        font:16px Reaular,"Myriad Pro";
+        font-weight:bold;
+    }
+    .main_part{
+        width:1050px;
+        height:2950px;
+        margin: 0 auto;
+        border-top: 23px solid #000;
+        position: absolute;
+        top: 746px;
+        left: 367px;
+        background: #ffffff;
+        padding:0px 88px 0px;
+        box-shadow:1px 1px 15px #000;
+    }
+    .main_part_logo{
+        width: 1100px;
+        height: 341px;
+        margin: 0 auto;
+        padding: 30px 0px 0px;
+        position: relative;
+        text-align: center;
+    }
+    .bird{
+        position: absolute;
+        top: 30px;
+        left:-20px;
+    }
+    .main_part_picA,.main_part_pieceA{
+        width: 523px;
+        height: 413px;
+        margin: 0;
+        padding: 0px 0px 0px;
+        position: relative;
+        display: inline-block;
+        border: 0px;
+    }
+    .main_part_picA{
+        float: left;
+    }
+    .main_part_pieceA{
+        border-top: 59px solid #ffffff;
+        height: 354px;
+        background: #f5f5f5;
+        position: relative;
+    }
+    .main_part_pieceB{
+        width: 697px;
+        height: 325px;
+        margin: 0;
+        padding: 0px 0px 0px;
+        position: absolute;
+        display: inline-block;
+        border: 0px;
+        background:#99CE87;
+        left: -86px;
+        top: 784px ;
+    }
+    .main_part_picB{
+        width: 523px;
+        height: 325px;
+        margin: 0;
+        padding: 0px 0px 0px;
+        display: inline-block;
+        border: 0px;
+        background-image: url(images/pic5.gif);
+        position: absolute;
+        left: 611px;
+        top: 784px;
+    }
+    .main_part_picC{
+        width: 523px;
+        height: 413px;
+        margin: 0;
+        padding: 0px 0px 0px;
+        border: 0px;
+        background-image: url(images/pic7.png);
+        position: absolute;
+        top:1109px;
+    }
+    .main_part_pieceC{
+            width: 523px;
+            height: 317px;
+            margin: 0;
+            padding: 0px 0px 0px;
+            border: 0px;
+            background:#f5f5f5;
+            position: absolute;
+            top:1109px;
+            left:611px ;
+        }
+    .skip_pieceA{
+        width: 360px;
+        height: 96px;
+        margin: 0;
+        border: 0px;
+        background:#80C269;
+        position: absolute;
+        top:1426px;
+        left:611px;
+    }
+    .main_part_pieceA span{
+        position: absolute;
+        top: 59px;
+        left: 58px;
+    }
+    .main_part_pieceC span{
+        position: absolute;
+        top: 59px;
+        left: 58px;
+    }
+    .part_pieceA_font1{
+             font: 20px arial,'Microsoft YaHei';
+             color: #000000;
+             font-weight: bold;
+         }
+    .part_pieceA_font2{
+        font: 18px arial,'Microsoft YaHei';
+        color: #525252;
+        font-weight: bold;
+    }
+    .part_pieceA_font3{
+        font:12px arial,'Microsoft YaHei' ;
+        color: #838383;
+    }
+    .part_pieceB_font1{
+        font: 20px arial,'Microsoft YaHei';
+        color: #ffffff;;
+    }
+    .part_pieceB_font2{
+        font: 18px Regular,'Microsoft YaHei';
+        color: #ffffff;
+        font-weight: 100;
+
+    }
+    .part_pieceB_font3{
+        font:12px arial,'Microsoft YaHei' ;
+        color: #ffffff;
+    }
+    .part_pieceC_font1{
+          font:20px arial,'Microsoft YaHei' ;
+          color: #838383;
+      }
+    .part1_pieceA_font1{
+        font: 20px arial,'Microsoft YaHei';
+        color: #8AC675;
+        font-weight: bold;
+    }
+    .part1_pieceA_font2{
+        font: 18px arial,'Microsoft YaHei';
+        color: #525252;
+        font-weight: bold;
+    }
+    .part1_pieceA_font3{
+        font: 20px arial,'Microsoft YaHei';
+        color: #CFCFCF;
+        font-weight: bold;
+    }
+
+    .blankness,.main_part_logo1 {
+        width: 925px;
+        height:800px;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+    }
+    .main_part_logo1{
+        height: 75px;
+    }
+    .logo1_hr{
+        color:#f5f5f5;
+        width:1000px;
+        position: absolute;
+        top: 34px;
+        opacity: 0.5;
+    }
+    .main_part1{
+        width: 925px;
+        height: 934px;
+        margin: 0 0 0 62.5px;
+        padding: 0px;
+        border-top: 106px solid #ffffff;
+        display: inline-block;
+        position: relative;
+    }
+    .main_part1_pieceB,.main_part1_pieceA{
+        width: 240px;
+        height: 412px;
+        display: inline-block;
+        position: relative;
+    }
+    .main_part1_pieceA{
+        margin:0 90px 60px 0;
+    }
+    .skip_pieceB{
+        width: 1050px;
+        height: 96px;
+        margin: 0 auto;
+        border: 0px;
+        background: #ffffff;
+        position: relative;
+        text-align: center;
+    }
+    .text1{
+        width: 20px;
+        border: 1px solid #000000;
+        outline: none;
+        position: relative;
+        top: -1px;
+    }
+    .frame{
+        position: absolute;
+        top: 1740px;
+        left:460px;
+    }
+    .frame1{
+        position: absolute;
+        top: 1710px;
+        left:550px;
+    }
+    /*底部*/
+    .Last_piece{
+        width: 1920px;
+        height: 280px;
+        margin: 0;
+        padding: 0 0 0 0;
+        border-top: 90px solid #ffffff;
+        text-align: center;
+        position: absolute;
+        top: 3800px;
+        background: #ffffff;
+    } .LastNav{
+          position:absolute;
+          left:400px;
+      }
+    .LastNav1{
+        position:absolute;
+        left: 524px;
+    }
+    .LastNav2{
+        position:absolute;
+        left: 589px;
+    }
+    .LastNav3{
+        position:absolute;
+        left: 735px;
+    }
+    .LastNav4{
+        position:absolute;
+        left: 797px;
+    }
+    .LastNav5{
+        position:absolute;
+        left: 943px;
+    }
+    .LastNav6{
+        position:absolute;
+        left: 1007px;
+    }
+    .LastNav7{
+        position:absolute;
+        left: 1153px;
+    }
+    .LastNav8{
+        position:absolute;
+        left: 1214px;
+    }
+    .LastNav9{
+         position:absolute;
+         left: 1362px;
+     }
+    .LastNav10{
+        position:absolute;
+        left: 1425px;
+    }
+    .fot{
+        text-align: center;
+        display: block;
+        margin: 30px;
+    }
+
+</style>
+<body style="margin: 0px; padding: 0px;background: #F5F5F5;">
+    <div class="nav">
+        <span class="nav_bar"><img src="images/logo_03.png" style="height: 55px;"></span>
+        <span class="nav_bar nav_bar_font"><a style="text-decoration: none" href="#"><font class="nav_bar_font">首页</font></a></span>
+        <span class="nav_bar nav_bar_point"><img src="images/point.png"></span>
+        <span class="nav_bar nav_bar_font1"><a style="text-decoration: none" href="#"><font class="nav_bar_font">热门植物</font></a></span>
+        <span class="nav_bar nav_bar_point1"><img src="images/point.png"></span>
+        <span class="nav_bar nav_bar_font2"><a style="text-decoration: none" href="#"><font class="nav_bar_font">新品速递</font></a></span>
+        <span class="nav_bar nav_bar_point2"><img src="images/point.png"></span>
+        <span class="nav_bar nav_bar_font3"><a style="text-decoration: none" href="#"><font class="nav_bar_font">关于我们</font></a></span>
+        <span class="nav_bar nav_bar_point3"><img src="images/point.png"></span>
+        <span class="nav_bar nav_bar_font4"><a style="text-decoration: none" href="#"><font class="nav_bar_font">玩家博客</font></a></span>
+        <span class="nav_bar  nav_bar_point4"><img src="images/point.png"></span>
+        <span class="nav_bar  nav_bar_font5"><a style="text-decoration: none" href="#"><font class="nav_bar_font">联系我们</font></a></span>
+    </div>
+    <div class="banner"></div>
+    <div class="main_part">
+        <div class="main_part_logo">
+            <span class="bird"><img src="images/pic23.png">&nbsp;>&nbsp;<img src="images/pic22.png"></span>
+            <span><img src="images/word1_03.png"></span>
+        </div>
+        <div class="main_part_picA">
+            <img src="images/pic1.gif">
+        </div>
+        <div class="main_part_pieceA">
+            <span class="body"><img src="images/pic8.png"></span>
+            <p class="top120L">
+                <font class="part_pieceA_font1">原始森林深度行</font>
+            </p>
+            <p class="top150L">
+                <font class="part_pieceA_font2">始终如一，感受地球创世纪之美</font>
+            </p>
+            <p class="top190L">
+                <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+            </p>
+            <p style="position: absolute;top: -40px;right:-30px;"><img src="images/pic3.png"></p>
+        </div>
+        <div class="main_part_pieceB">
+            <span style="margin: 30px"><img src="images/pic4.png" style="opacity: 0.2"></span>
+            <span><img src="images/pic6.png" style="position: absolute;top:59px;right: 60px"></span>
+            <p style="position: absolute;top:120px;right: 60px">
+                <font class="part_pieceB_font1">原始森林深度行</font>
+            </p>
+            <p style="position: absolute;top:150px;right: 60px">
+                <font class="part_pieceB_font2">始终如一，感受地球创世纪之美</font>
+            </p>
+            <p style="position: absolute;top:190px;right: 60px">
+                <img src="images/point3.png"> <font class="part_pieceB_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point3.png">2016-09-22</font>
+            </p>
+            <p><img src="images/pic3.png" style="position: absolute;top: 180px;left:160px"></p>
+        </div>
+        <div class="main_part_picB"></div>
+        <div class="main_part_picC"></div>
+        <div class="main_part_pieceC">
+            <span><img src="images/pic2.png"></span>
+            <p style="position: absolute;top:90px;left: 60px">
+                <font class="part_pieceC_font1">原始森林深度行</font>
+            </p>
+            <p style="position: absolute;top:130px;left: 60px">
+                <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+            </p>
+            <p><img src="images/pic9.png" style="position: relative;top: 260px;right: -480px"></p>
+        </div>
+        <div class="skip_pieceA">
+            <div>
+                <span class="skip_arrowA"><img src="images/pic10.png"></span>
+                <span class="skip_number" style="background: #ffffff;color: #80C269;position: relative;top: 30px;left: 25px">01</span>
+                <span class="skip_numberA" style="border: 1px solid #ffffff">02</span>
+                <span class="skip_numberA" style="border: 1px solid #ffffff">03</span>
+                <span class="skip_numberA" style="border: 1px solid #ffffff">04</span>
+                <span class="skip_arrowA"><img src="images/pic11.png"></span>
+            </div>
+        </div>
+        <div class="blankness"></div>
+        <div class="main_part_logo1">
+            <img src="images/pic24.png">
+            <hr class="logo1_hr">
+        </div>
+        <div class="main_part1">
+            <div class="main_part1_pieceA">
+                <img src="images/pic12.gif">
+                <p class="top300">
+                    <font class="part1_pieceA_font1">原始森林深度行&nbsp;&nbsp;<font class="part1_pieceA_font3">THE HOT</font></font>
+                </p>
+                <p class="top330">
+                    <font class="part1_pieceA_font2">始终如一，感受地球创世纪...</font>
+                </p>
+                <p class="top360">
+                    <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+                </p>
+            </div>
+            <div class="main_part1_pieceA">
+                <img src="images/pic13.gif">
+                <p class="top300">
+                    <font class="part1_pieceA_font1">原始森林深度行&nbsp;&nbsp;<font class="part1_pieceA_font3">THE HOT</font></font>
+                </p>
+                <p class="top330">
+                    <font class="part1_pieceA_font2">始终如一，感受地球创世纪...</font>
+                </p>
+                <p class="top360">
+                    <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+                </p>
+            </div>
+            <div class="main_part1_pieceB">
+                <img src="images/pic14.gif">
+                <p class="top300">
+                    <font class="part1_pieceA_font1">原始森林深度行&nbsp;&nbsp;<font class="part1_pieceA_font3">THE HOT</font></font>
+                </p>
+                <p class="top330">
+                    <font class="part1_pieceA_font2">始终如一，感受地球创世纪...</font>
+                </p>
+                <p class="top360">
+                    <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+                </p>
+            </div>
+            <div class="main_part1_pieceA">
+                <img src="images/pic15.gif">
+                <p class="top300">
+                    <font class="part1_pieceA_font1">原始森林深度行&nbsp;&nbsp;<font class="part1_pieceA_font3">THE HOT</font></font>
+                </p>
+                <p class="top330">
+                    <font class="part1_pieceA_font2">始终如一，感受地球创世纪...</font>
+                </p>
+                <p class="top360">
+                    <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+                </p>
+            </div>
+            <div class="main_part1_pieceA">
+                <img src="images/pic16.gif">
+                <p class="top300">
+                    <font class="part1_pieceA_font1">原始森林深度行&nbsp;&nbsp;<font class="part1_pieceA_font3">THE HOT</font></font>
+                </p>
+                <p class="top330">
+                    <font class="part1_pieceA_font2">始终如一，感受地球创世纪...</font>
+                </p>
+                <p class="top360">
+                    <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+                </p>
+            </div>
+            <div class="main_part1_pieceB">
+                <img src="images/pic17.png">
+                <p class="top300">
+                    <font class="part1_pieceA_font1">原始森林深度行&nbsp;&nbsp;<font class="part1_pieceA_font3">THE HOT</font></font>
+                </p>
+                <p class="top330">
+                    <font class="part1_pieceA_font2">始终如一，感受地球创世纪...</font>
+                </p>
+                <p class="top360">
+                    <img src="images/point2.png"> <font class="part_pieceA_font3">999人浏览&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/point2.png">2016-09-22</font>
+                </p>
+            </div>
+        </div>
+        <div class="skip_pieceB">
+            <span class="skip_pic skip_arrow" ><img src="images/pic18.png"></span>
+            <span class="skip_number" style="background: #80C269">01</span>
+            <span class="skip_number">02</span>
+            <span class="skip_number">03</span>
+            <span class="skip_number">04</span>
+            <span  class="skip_pic"><img src="images/point4.png"></span>
+            <span class="skip_number">49</span>
+            <span class="skip_number">50</span>
+            <span class="skip_pic skip_arrow"><img src="images/pic19.png"></span>
+            <span ><font class="skip_font">至&nbsp;&nbsp;<input type="text" style="width: 50px">&nbsp;&nbsp;页&nbsp;&nbsp;</font></span>
+            <span class="skip_go">GO</span>
+        </div>
+        <p class="frame"><img src="images/pic20.png"></p>
+        <p class="frame1"><img src="images/pic21.png"></p>
+    </div>
+    <div class="Last_piece">
+        <div>
+            <span class="nav_bar LastNav"><a style="text-decoration: none" href="#"><font class="nav_bar_font">首页</font></a></span>
+            <span class="nav_bar LastNav1"><img src="images/point.png"></span>
+            <span class="nav_bar LastNav2"><a style="text-decoration: none" href="#"><font class="nav_bar_font">热门植物</font></a></span>
+            <span class="nav_bar LastNav3"><img src="images/point.png"></span>
+            <span class="nav_bar LastNav4"><a style="text-decoration: none" href="#"><font class="nav_bar_font">新品速递</font></a></span>
+            <span class="nav_bar LastNav5"><img src="images/point.png"></span>
+            <span class="nav_bar LastNav6"><a style="text-decoration: none" href="#"><font class="nav_bar_font">关于我们</font></a></span>
+            <span class="nav_bar LastNav7"><img src="images/point.png"></span>
+            <span class="nav_bar LastNav8"><a style="text-decoration: none" href="#"><font class="nav_bar_font">玩家博客</font></a></span>
+            <span class="nav_bar LastNav9"><img src="images/point.png"></span>
+            <span class="nav_bar LastNav10"><a style="text-decoration: none" href="#"><font class="nav_bar_font">联系我们</font></a></span>
+        </div>
+        <div style="text-align: center;margin-top: 60px">
+            <img src="images/logo_03.png">
+        </div>
+        <span class="fot">Copyright 2016-2017 All Rights Reserves By Furou Flower Co.Lld</span>
+    </div>
+</body>
+</html>
